@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
-const mongoDbPath = "mongodb+srv://anishsingh199804:anish1998@cluster0.2irmxyv.mongodb.net/crud_register_db?retryWrites=true&w=majority";
+const MONGODB_PATH = process.env.MONGODB_URL
+
+const mongoDbPath = MONGODB_PATH;
 
 mongoose.connect(mongoDbPath,{
     useNewUrlParser: true,

@@ -6,8 +6,8 @@ require("./DB/Connection");
 const user = require("./DB/Models/dbmodels");
 const cors = require("cors");
 const api = require("./API/routes");
-
-const port = 4242;
+const PORT_NO = process.env.PORT
+const port = PORT_NO || 4000;
 app.use(cors());
 app.use(express.json())
 
